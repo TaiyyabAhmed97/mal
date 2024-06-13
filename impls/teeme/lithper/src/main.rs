@@ -5,14 +5,11 @@ fn main() {
     loop {
         print!("user> ");
         io::stdout().flush().unwrap();
-        let bytes = io::stdin()
-            .read_line(&mut line)
-            .expect("could not read line");
+        let bytes = io::stdin().read_line(&mut line).expect("could not read line");
         if bytes == 0 {
             println!();
             break;
         }
-        print!("{}", line);
     }
 }
 
